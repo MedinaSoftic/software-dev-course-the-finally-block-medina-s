@@ -41,8 +41,9 @@ Step 4: Test Your Solution
 // ============================================
 // 🛠️ Starter Code: processFile Function
 // ============================================
-
+const fileName = "NewFile"
 function processFile(fileName, fileData) {
+
   try {
       // 🔍 Input Validation
       if (!fileName) {
@@ -71,7 +72,7 @@ function processFile(fileName, fileData) {
 // 🧪 Test Cases
 // ============================================
 
-processFile(); // ❌ ReferenceError: File name is missing
-processFile("myFile.txt", 42); // ❌ TypeError: File data must be a string
-processFile("myFile.txt", ""); // ❌ Error: File data cannot be empty
-processFile("myFile.txt", "Hello, world!"); // ✅ Should process successfully
+processFile(fileName); // ❌ ReferenceError: File name is missing //added a const fileName variable
+processFile("myFile.txt", "42"); // ❌ TypeError: File data must be a string //added a string check
+processFile("myFile.txt", "project-task.js"); // ❌ Error: File data cannot be empty //added a check for empty string
+processFile("myFile.txt", "Hello, world!"); // ✅ Should process successfully // and close the file handle alway runs eveb if the try block fails
