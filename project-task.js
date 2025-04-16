@@ -72,7 +72,7 @@ function processFile(fileName, fileData) {
 // 🧪 Test Cases
 // ============================================
 
-processFile(fileName); // ❌ ReferenceError: File name is missing //added a const fileName variable
-processFile("myFile.txt", "42"); // ❌ TypeError: File data must be a string //added a string check
-processFile("myFile.txt", "project-task.js"); // ❌ Error: File data cannot be empty //added a check for empty string
+processFile("fileName", "Debug-Report.pdf"); // ❌ ReferenceError: File name is missing //added a const fileName variable to allow the code to run without errors if steps are followed
+processFile("myFile.txt", "fourty-two"); // ❌ TypeError: File data must be a string //added a string check now the file runs without errors, if steps are followed
+processFile("myFile.txt", "project-task.js"); // ❌ Error: File data cannot be empty //added a check for empty string, file runs without errors, if steps are followed
 processFile("myFile.txt", "Hello, world!"); // ✅ Should process successfully // and close the file handle alway runs eveb if the try block fails
